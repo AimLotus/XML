@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ajax01</title>
+	<script>
+		window.onload = function () {
+			document.getElementById('carga').onclick = cargaArchivo;
+		}
+		function cargaArchivo() {
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+				alert("El navegador si soporta XMLHttpRequest");
+			} else {
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				alert("Tu navegador no soporta XMLHTTP");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="salida"><h2>Pulsa el botón para leer el archivo de texto de AJAX</h2>
+	<button id="carga">Cargar el archivo</button>
+	</div>
+</body>
+</html>
